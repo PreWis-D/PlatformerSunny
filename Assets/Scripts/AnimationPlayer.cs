@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent (typeof(SpriteRenderer))]
+[RequireComponent (typeof(Animator))]
+[RequireComponent (typeof(PlayerMovement))]
+
 public class AnimationPlayer : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
-    private PlayerController _player;
+    private PlayerMovement _player;
 
     private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
-        _player = GetComponent<PlayerController>();
+        _player = GetComponent<PlayerMovement>();
     }
 
     private void Update()

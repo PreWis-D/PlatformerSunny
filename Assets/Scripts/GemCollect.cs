@@ -6,9 +6,9 @@ public class GemCollect : MonoBehaviour
 {
     public static int GemCount { get; private set; } = 0;
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collider.tag.Equals("Player"))
+        if (collision.TryGetComponent(out PlayerMovement player))
         {
             GemCount++;
             Destroy(gameObject);
