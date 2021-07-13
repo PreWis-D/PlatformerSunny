@@ -12,7 +12,7 @@ public class GemSpawner : MonoBehaviour
         Spawn();
     }
 
-    public void Spawn()
+    private void Spawn()
     {
         for (int i = 0; i < _spawnPoints.Length; i++)
         {

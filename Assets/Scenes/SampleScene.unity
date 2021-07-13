@@ -4179,7 +4179,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: =
+  m_Text: = 0
 --- !u!222 &720152611
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15907,6 +15907,10 @@ PrefabInstance:
       propertyPath: _patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 95684316}
+    - target: {fileID: 2974240937390939428, guid: 8a2ebd345236cc04087dce639a0971db, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2974240937390939430, guid: 8a2ebd345236cc04087dce639a0971db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.92

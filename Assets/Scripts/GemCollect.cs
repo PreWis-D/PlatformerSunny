@@ -8,9 +8,10 @@ public class GemCollect : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out PlayerMovement player))
+        if (collision.TryGetComponent(out PlayerMover player))
         {
             GemCount++;
+            ScoreView.Instance.ShowInfo();
             Destroy(gameObject);
         }
     }

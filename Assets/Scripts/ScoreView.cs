@@ -7,13 +7,16 @@ public class ScoreView : MonoBehaviour
 {
     private Text _score;
 
-    private void Start()
+    public static ScoreView Instance { get; private set; }
+
+    private void Awake()
     {
+        Instance = this;
         _score = GetComponent<Text>();
     }
 
-    private void Update()
+    public void ShowInfo()
     {
-        _score.text = "= " + GemCollect.GemCount;
+        _score.text = "= " + GemCollect.GemCount.ToString();
     }
 }
