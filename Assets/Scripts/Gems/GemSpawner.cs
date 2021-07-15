@@ -5,18 +5,18 @@ using UnityEngine;
 public class GemSpawner : MonoBehaviour
 {
     [SerializeField] private Transform[] _spawnPoints;
-    [SerializeField] private GameObject _gem;
+    [SerializeField] private Gem _gem;
 
     private void Start()
     {
-        Spawn();
+        Spawn(_gem);
     }
 
-    private void Spawn()
+    private void Spawn(Gem gem)
     {
         for (int i = 0; i < _spawnPoints.Length; i++)
         {
-            Instantiate(_gem, new Vector3(_spawnPoints[i].position.x, _spawnPoints[i].position.y), transform.rotation);
+            _gem = Instantiate(gem, new Vector3(_spawnPoints[i].position.x, _spawnPoints[i].position.y), transform.rotation);
         }
     }
 }
