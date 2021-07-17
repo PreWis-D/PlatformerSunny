@@ -9,14 +9,14 @@ public class GemSpawner : MonoBehaviour
 
     private void Start()
     {
-        Spawn(_gem);
+        Spawn();
     }
 
-    private void Spawn(Gem gem)
+    private void Spawn()
     {
         for (int i = 0; i < _spawnPoints.Length; i++)
         {
-            _gem = Instantiate(gem, new Vector3(_spawnPoints[i].position.x, _spawnPoints[i].position.y), transform.rotation);
+            _gem = Instantiate(_gem, new Vector3(_spawnPoints[i].position.x, _spawnPoints[i].position.y), transform.rotation);
         }
     }
 }
