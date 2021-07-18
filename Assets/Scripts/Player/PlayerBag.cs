@@ -14,15 +14,15 @@ public class PlayerBag : MonoBehaviour
 
     private void OnEnable()
     {
-        _gemCollector.Reached += AddGemCount;
+        _gemCollector.Collected += OnGemCountChanged;
     }
 
     private void OnDisable()
     {
-        _gemCollector.Reached -= AddGemCount;
+        _gemCollector.Collected -= OnGemCountChanged;
     }
 
-    public void AddGemCount(int count)
+    public void OnGemCountChanged(int count)
     {
         _gemCount += count;
         GemCollected?.Invoke(_gemCount);
